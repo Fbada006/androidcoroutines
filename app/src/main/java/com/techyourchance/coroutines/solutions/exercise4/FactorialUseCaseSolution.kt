@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit
 
 class FactorialUseCaseSolution {
 
-    public sealed class Result {
+    sealed class Result {
         class Success(val result: BigInteger) : Result()
         object Timeout : Result()
     }

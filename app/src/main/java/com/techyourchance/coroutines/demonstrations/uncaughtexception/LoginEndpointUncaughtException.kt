@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger
 
 class LoginEndpointUncaughtException {
 
-    class RequestTimeoutException(msg: String) : RuntimeException(msg) {}
+    class RequestTimeoutException(msg: String) : RuntimeException(msg)
 
     sealed class Response {
         data class Success(val user: LoggedInUser): Response()

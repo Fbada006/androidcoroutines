@@ -41,7 +41,7 @@ class CoroutinesCancellationCooperative2DemoFragment : BaseFragment() {
 
             val benchmarkDurationSeconds = 5
 
-            coroutineScope.launch() {
+            coroutineScope.launch {
                 updateRemainingTime(benchmarkDurationSeconds)
             }
 
