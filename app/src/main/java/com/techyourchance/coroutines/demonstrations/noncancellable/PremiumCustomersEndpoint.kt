@@ -6,9 +6,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 
-class PremiumCustomersEndpoint {
+open class PremiumCustomersEndpoint {
 
-    suspend fun makeCustomerPremium(customerId: String): Customer = withContext(Dispatchers.IO) {
+    open suspend fun makeCustomerPremium(customerId: String): Customer = withContext(Dispatchers.IO) {
         logThreadInfo("changing customer's status to premium on the server")
         delay(2000)
         return@withContext Customer(customerId, true)

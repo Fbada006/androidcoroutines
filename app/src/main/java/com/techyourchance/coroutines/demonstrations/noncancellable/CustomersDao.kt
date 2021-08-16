@@ -6,9 +6,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
 
-class CustomersDao {
+open class CustomersDao {
 
-    suspend fun updateCustomer(customer: Customer) = withContext(Dispatchers.IO) {
+    open suspend fun updateCustomer(customer: Customer) = withContext(Dispatchers.IO) {
         logThreadInfo("updating local customer's data")
         delay(2000)
     }
